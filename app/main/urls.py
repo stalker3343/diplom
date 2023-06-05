@@ -1,11 +1,12 @@
-from django.urls import path
 from . import views
-
+from rest_framework.routers import SimpleRouter
 app_name = "main"
 
-urlpatterns = [
-    path('', views.index, name="main"),
-    path('login', views.login_request, name="login"),
-    path('home', views.home_page, name="home"),
-    path('scan', views.scan, name="scan")
-]
+router = SimpleRouter()
+
+router.register("cves", views.CvesAPI, basename="cves")
+router.register("protocols", views.ProtocolAPI, basename="protocols")
+router.register("rates", views.InfectionRateAPI, basename="rates")
+router.register("scans", views.ScanAPI, basename="scans")
+
+urlpatterns = router.urls
