@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}
+    Get started
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/welcome.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="u-align-center u-clearfix u-grey-10 u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-section-2" id="carousel_6659">
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout-row u-section-2">
+                <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30-md u-size-30-sm u-size-30-xs u-size-34-lg u-size-34-xl u-image-1" data-image-width="1200" data-image-height="800">
+                    <img src="{% static 'main/img/hacker.jpg' %}" alt="Logo">
+                    <div class="u-container-layout u-container-layout-1"></div>
+                </div>
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                    <h2 class="u-text u-text-1">О сайте</h2>
+                    <p class="u-text u-text-2">Сайт предназначен для проведения сканирования корпоративной сети для определения уязвимостей информационных систем.
+                        Функциональным назначением сайта является администрирование корпоративной сети для выявления наличия уязвимых
+                        информационных систем и предотвращение несанкционированного изменения и/или удаления пользовательских данных.</p>
+                    <a href="/login"><button class="btn btn-primary" type="submit">Начать работу</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

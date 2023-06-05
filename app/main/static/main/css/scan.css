@@ -1,0 +1,21 @@
+body {
+  background: rgb(190, 180, 210);
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+}
+
+.container {
+    margin: 20px;
+    text-align: center;
+}
+
+.container>table {
+    margin: 10px;
+    text-align: center;
+}
+
+.container>btn {
+    margin: 10px;
+    text-align: center;
+}

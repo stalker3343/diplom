@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title_layout %}
+    {{ title }}
+{% endblock %}
+
+{% block content_layout %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Some text</p>
+        <button class="btn btn-warning">To about</button>
+
+        {% for element in values %}
+            {% if element == "Hello" %}
+                <p>{{ element|upper }}</p>
+            {% endif %}
+        {% endfor %}
+
+        {% for element in obj %}
+            <p>{{ element }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

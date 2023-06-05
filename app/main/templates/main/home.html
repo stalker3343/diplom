@@ -1,0 +1,43 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+    <script src="{% static 'main/js/main.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="operation">
+            <a href="/scan"><button class="btn btn-primary" type="submit">Новое сканирование</button></a>
+            <a href="/"><button class="btn btn-primary" type="submit">Выход</button></a>
+        </div>
+        {% for user in users %}
+            <div class="container">
+                <table align="center" bgcolor="#5f9ea0" width="100%">
+                    <tr>
+                        <th>id</th>
+                        <th>ip</th>
+                        <th>cve</th>
+                        <th>protocol</th>
+                        <th>scan_data</th>
+                        <th>gradation</th>
+                    </tr>
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.ip_target }}</td>
+                        <td>{{ user.cve_id }}</td>
+                        <td>{{ user.protocol }}</td>
+                        <td>{{ user.scan_data }}</td>
+                        <td>{{ user.gradation }}</td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

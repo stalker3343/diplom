@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% load crispy_forms_tags %}
+
+    <!--Login-->
+    <div class="card-body">
+        <h2 class="login-header">Авторизация</h2>
+        <form method="POST" class="login-container" action="/login">
+            {% csrf_token %}
+            {{ login_form|crispy }}
+            <button class="btn btn-primary" type="submit">Вход</button>
+        </form>
+        {% for message in messages %}
+            <div class="container">
+                <p>"Invalid username and password"</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

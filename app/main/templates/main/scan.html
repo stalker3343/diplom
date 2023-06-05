@@ -1,0 +1,22 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/scan.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST" class="scan-container" action="/home">
+            {% csrf_token %}
+            <table>
+                {{ scan_form.as_table }}
+            </table>
+            <a href="/scan"><button class="btn btn-primary" type="submit">Начать сканирование</button></a>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "main/index.html" %}
+{% load static %}
+
+{% block title %}
+    {% block title_layout %}
+    {% endblock %}
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+    <aside>
+        <img src="{% static 'main/img/mem-s-bagz-banni.jpg' %}" alt="Logo">
+        <span class="logo">Bags Banni</span>
+        <h3>Navigations</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Main</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> About</li></a>
+            <a href=""><li><i class="fas fa-paper-plane"></i> Contact</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content_layout %}
+        {% endblock %}
+    </main>
+{% endblock %}
+

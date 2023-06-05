@@ -1,0 +1,80 @@
+body {
+  background: rgb(190, 180, 210);
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+}
+
+.u-section-2 {
+  min-height: 736px;
+  background-image: none;
+}
+.u-section-2 .u-layout-wrap-1 {
+  width: calc(((100% - 1900px) / 2) + 1900px);
+  margin: 100px auto 0 0;
+}
+.u-section-2 .u-image-1 {
+  width: 400px;
+  background-position: 1.73% 50%;
+}
+
+img {
+  width: 1000px;
+  margin-left: 70px;
+  margin-right: 70px;
+  float: left;
+  background-position: 1.73% 50%;
+  border-radius: 25px;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 30px 30px 0 0;
+}
+.u-section-2 .u-layout-cell-2 {
+  min-height: 400px;
+}
+.u-section-2 .u-container-layout-2 {
+  padding: 60px 50px;
+}
+.u-section-2 .u-text-1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 35px;
+  margin-top: 50px;
+}
+.u-section-2 .u-text-2 {
+  line-height: 2.25;
+  text-align: center;
+  padding-left: 24px;
+  margin: 20px;
+}
+
+.btn {
+  width: 10%;
+  margin-top: 20px;
+  margin-left: 260px;
+  text-transform: uppercase;
+  padding: 8px;
+  align-self: center;
+}
+
+.u-section-2 .u-btn-1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  background-image: none;
+  border-style: none;
+  align-self: center;
+  margin-top: 42px;
+  margin-left: 175px;
+  padding: 19px 51px 20px;
+}
+.u-section-2 .u-text-3 {
+  letter-spacing: 1px;
+  margin: 54px 28px 0;
+}
+.u-section-2 .u-btn-2 {
+  border-style: none none solid;
+  padding: 0;
+}
