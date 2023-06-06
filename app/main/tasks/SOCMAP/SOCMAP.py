@@ -83,10 +83,10 @@ def CVE_2022_21907(target, gradation):
     while True:
         time.sleep(10)
         if not verify_handshake(target):
-            return 1
+            return 2
             break
         logger.info(f'{target} have CVE-2022-21907 vulnerability, can be exploited!')
-        return 2
+        return 1
     
 
 def log_info(s):

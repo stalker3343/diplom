@@ -11,11 +11,11 @@ def CVE_2020_0796(target: str, gradation):
 
     sock = socket.socket(socket.AF_INET)
     sock.settimeout(3)
-    if gradation:
-        log_info(f"Checking if {target} is vulnerable...")
-        result = random.randint(1, 2)
-        log_success(f"{target} Not vulnerable.") if result == 1 else log_error(f"{target} vulnerable.")
-        return result
+    # if gradation:
+    #     log_info(f"Checking if {target} is vulnerable...")
+    #     result = random.randint(1, 2)
+    #     log_success(f"{target} Not vulnerable.") if result == 1 else log_error(f"{target} vulnerable.")
+    #     return result
     try:
         sock.connect((str(target),  445))
 
