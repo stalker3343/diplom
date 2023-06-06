@@ -5,6 +5,7 @@ from .models import CVES, ResultScan, InfectionRate, Protocols
 from .serializers import CVESSerializer, ResultScanSerializer, InfectionRateSerializer, ProtocolsSerializer, \
     ScanSerializer
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ViewSet
 
 
 def define_targets():
@@ -70,3 +71,16 @@ class InfectionRateAPI(ModelViewSet):
 class ProtocolAPI(ModelViewSet):
     queryset = Protocols.objects.all()
     serializer_class = ProtocolsSerializer
+
+
+class Targets(ModelViewSet):
+    def list(self, request, *args, **kwargs):
+        targets =  define_targets()
+        cves = get_cves()
+
+        data = {
+            "targets": targets,
+            "cves": cves
+        }
+
+        return Response(data=data)
