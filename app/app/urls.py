@@ -32,6 +32,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('auth/', include('djoser.urls')),
+    re_path(r'^auth/', include('djoser.urls.jwt')),
     path('admin/', admin.site.urls),
     path('api/', include("main.urls")),
     re_path(

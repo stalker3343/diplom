@@ -75,7 +75,7 @@ class ProtocolAPI(ModelViewSet):
 
 class Targets(ModelViewSet):
     def list(self, request, *args, **kwargs):
-        targets =  define_targets()
+        targets = define_targets()
         cves = get_cves()
 
         data = {
